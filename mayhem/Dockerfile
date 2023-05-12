@@ -1,4 +1,4 @@
-# Use the base builder image for Rust projects as the builder stage
+# Use nottirb's base builder image for Fuzzing Rust as the builder stage
 FROM ghcr.io/nottirb/fuzz-rust:latest as builder
 
 # Add source to the build stage
