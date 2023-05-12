@@ -1,0 +1,28 @@
+[package]
+name = "fuzz-bimap-rs"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies]
+honggfuzz = "0.5.55"
+
+[dependencies.bimap]
+path = ".."
+
+[workspace]
+members = ["."]
+
+[[bin]]
+name = "fuzz_get_by_left"
+path = "fuzz_targets/fuzz_get_by_left.rs"
+
+[[bin]]
+name = "fuzz_get_by_right"
+path = "fuzz_targets/fuzz_get_by_right.rs"
+
+[[bin]]
+name = "fuzz_insert"
+path = "fuzz_targets/fuzz_insert.rs"

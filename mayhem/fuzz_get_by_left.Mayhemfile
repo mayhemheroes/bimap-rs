@@ -1,0 +1,5 @@
+project: bimap-rs
+target: fuzz-get-by-left
+
+cmds:
+    - cmd: /fuzz_get_by_left
